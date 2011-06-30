@@ -16,8 +16,8 @@ class __init__( modifier ):
                         if x == '-1.0':
                             x = 'Unlimited'
                         elif x == '':
-			    x = ''
-			else:
+                            x = ''
+                        else:
                             result = '$' + locale.format("%d", int(round(float(x))), True, True)
                             x = result
                     except Exception, e:
