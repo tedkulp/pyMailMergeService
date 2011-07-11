@@ -21,7 +21,8 @@ class __init__( modifier ):
                             result = '$' + locale.format("%.2f", float(x), True, True)
                             x = result
                     except Exception, e:
-                        traceback.print_exc(file=sys.stdout)
+                        #traceback.print_exc(file=sys.stdout)
+                        pass
                     document.searchAndReplaceFirst( key, x )
             else:
                 try:
@@ -31,8 +32,9 @@ class __init__( modifier ):
                         result = '$' + locale.format("%.2f", float(param['value']), True, True)
                         param['value'] = result
                 except Exception, e:
-                    traceback.print_exc(file=sys.stdout)
-	        document.searchAndReplace( key, param['value'] )
+                    #traceback.print_exc(file=sys.stdout)
+                    pass
+                document.searchAndReplace( key, param['value'] )
         except Exception, e:
             traceback.print_exc(file=sys.stdout)
-modifiers.modifiers.modifierOrder.append( {'name':'currencytwo', 'order':99 } )
+modifiers.modifiers.modifierOrder.append( {'name':'currencytwo', 'order':100 } )
